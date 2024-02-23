@@ -1,0 +1,1223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Pacifico&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+:root {
+    --bg: #ecf1f3;
+    --bg-trama: rgb(253, 195, 37);
+    --naranja:  rgb(255, 153, 0);
+    --color-font:  #2a3846;
+    --gris: rgb(173, 186, 214);
+    --font: 'Roboto', sans-serif;
+    --font-tit: 'Raleway', sans-serif;
+    --font-portada: 'Pacifico', cursive; 
+    --shadow: rgba(118, 118, 138, 0.3);
+    --gradient-moz: -moz-linear-gradient(bottom, rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 90%, rgba(0,0,0,.8) 100%);
+    --gradient-webkit: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 90%, rgba(0,0,0,.8) 100%);
+}
+
+body {
+    line-height: 1;
+    font-family: var(--font);
+    color: var(--color-font);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font:var(--font);
+    color: var(--color-font);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    padding: 0 10%;
+    padding-bottom: 100px;
+}
+
+.contenedor {
+    display: flex;
+    padding: 0 10%;
+    justify-content: center;
+}
+
+/*--------------------- ESTILOS DE PORTADA ----------*/
+.cabecera{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    padding: 0 10%;
+    top: 0;
+    display: flex;
+    align-items:center;
+    transition: all 0.2s linear;
+}
+
+.portada {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: var(--gradient), url("../img/fondos/portada-1020x2.png");
+    background-image: var(--gradient-webkit), url("../img/fondos/portada-1020x2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 4% 10%;
+}
+
+.cont-tit {
+    width: 520px;
+    /*width: 34%;*/
+}
+
+h1.tit-portada {
+    font-family: var(--font-tit);
+    font-weight: 700;
+    font-size: 3.8rem; 
+    line-height: 5rem;
+    color: var(--naranja);
+}
+
+.portada p {
+    margin-top: 65px;
+    font-size: 2.28571rem;
+    font-weight: 600;
+}
+/*-------------------- fin de estilo de portada ------------------------------*/
+
+
+/*----------------------------ESTILOS NAVEGADOR------------------------------*/
+.navegador {
+    width: 100%;
+    display: flex;
+    align-items:center;
+}
+
+.navegador .nav-int{
+    flex: 1;
+    display: flex;
+}
+
+.btn-pedido,
+.navegador div:nth-child(2) {/*posicion de elemento*/
+    justify-content: center;
+}
+
+.btn-cabecera{
+    border-radius: 50px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.btn-gral{
+    background-color: var(--naranja);
+    color: var(--bg);
+}
+
+.btn-gral-fixed {
+    background-color: var(--bg);
+    color: var(--naranja);
+}
+
+
+.btn-cabecera:hover{
+    transform: scale(1.04);
+    transition: 0.2s;
+    transition-property: transform;
+}
+
+ul.nav-int {
+    justify-content: right;
+    align-items: center;
+    border-radius: 50px;
+    background-image: -moz-linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255,255,255,0) 90%);
+    background-image: -webkit-linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255,255,255,0) 90%);
+}
+
+ul.nav-int li {
+    padding: 15px 30px;
+    justify-content: right;
+}
+
+ul div.triangulo {
+    position: absolute;
+    background-color: #fff;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    top: 40px;
+    right: 40px;
+}
+
+ul.nav-int li.account {
+    cursor: pointer;
+    position: relative;
+}
+
+li.account ul {
+    position: absolute;
+    display: none;
+}
+
+.shadow-li-account {
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+li.account:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+    top: 23px;
+    right: 10px;
+}
+
+li.account:hover li.hidden{
+    background-color: transparent;
+    height: 50px;
+}
+
+li.account:hover ul li {
+    background-color: #fff;
+}
+
+li.account ul li {
+    padding: 0 20px;
+}
+
+li div.li-account {
+    padding: 20px 0;
+}
+
+.border-li-acount {
+    border-bottom: 1px solid var(--gris);
+}
+
+ul.nav-int li a:hover {
+    color: var(--naranja);
+}
+
+
+ul.nav-gral li.btn-empezar{
+    border-radius: 50px;
+    background-color: rgb(255, 0, 0);
+    width: 6.25rem;
+    height: 2.5rem;
+    text-align: center;
+}
+
+
+ul.admin{
+    justify-content: center;
+    align-items: center;
+}
+
+ul.admin li {
+    padding: 0.5rem;
+}
+
+.menu-fixed {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.44);
+    background-color: rgba(255, 153, 0, 0.9);
+    transition-property: background-color;
+    transition: 0.3s;
+}
+
+/*---------------------fin estilos navegador -------------*/
+
+
+/*-------------------- ESTILO DE LOGIN -------------------------**/
+.header-rest {
+    width: 100%;
+    height: 400px;
+    background-image: var(--gradient-moz), url(../img/fondos/header-login-1200.jpg);
+    background-image: var(--gradient-webkit), url(../img/fondos/header-login-1200.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.login { /*--ok --*/
+    display: flex;
+    margin-top: -120px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.registrate, .select-admin { 
+    padding: 30px;
+    width: 35%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 15px var(--shadow);
+}
+
+.tema-color-fuente{
+    color: var(--color-font);
+    margin-bottom: 15px;
+}
+
+a.tema-color-fuente {
+    text-decoration: underline;
+}
+
+a.tema-color-fuente:hover{ 
+    color: var(--naranja);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: var(--font-tit);
+}
+
+input:focus {
+    outline: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type = "radio"]:focus {
+    outline: 1px;
+    -webkit-appearance: auto;
+    appearance: auto;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator { /*-- ok --*/
+    background: none;
+    cursor: pointer;
+  }
+
+input[type = "date"], input[type = "text"]{ /*-- ok --*/
+    font-family: var(--font);
+    box-sizing: border-box;
+    appearance: none;
+    outline: none;
+}
+
+input[type='email']:focus,
+ input[type='number']:focus,
+ input[type='password']:focus,
+ input[type='search']:focus,
+ input[type='tel']:focus,
+ input[type='text']:focus,
+ input[type='url']:focus,
+ textarea:focus,
+ select:focus {
+     border-color: var(--naranja);
+     outline: 0;
+ }
+
+ textarea {
+     font-family: var(--font);
+ }
+
+.form-control { /*-- ok --*/
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid var(--gris);
+    display: flex;
+}
+
+.select-fecha{ /*-- ok --*/
+    border:0;
+    cursor: pointer;
+    padding: 0 8px;
+    width: 100%;
+}
+
+.back-select { /*--- ok --*/
+    color:#606b88;
+    font-size: 1rem;
+    height: 38px;
+    width:100%;
+    padding: 0 15px;
+}
+
+.text-registro{ /*-- ok --*/
+    text-align: justify;
+    line-height: 1.56rem;
+}
+
+.btn-delete,
+.btn-mod,
+.btn-form{ /*---ok--*/
+    text-align: center;
+    cursor: pointer;
+    font-family: var(--font);
+    margin: 20px 0;
+    border-radius: 50px;
+    border: 0;
+    background-color: var(--naranja);
+    color: var(--bg);
+}
+
+.btn-form {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    transition: all 0.2s linear;
+}
+
+.btn-delete,
+.btn-mod {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+}
+
+.btn-delete:hover,
+.btn-mod:hover,
+.btn-form:hover { /*--- ok --*/
+    background-color: var(--bg-trama);
+    color: var(--bg);
+    transition-property: background-color;
+    transition: .3s;
+}
+
+.errorUsuario { /*---ok---*/
+    color: var(--naranja);
+    font-size: 0.8125rem;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+form :-moz-ui-invalid {
+    border: 0;
+    box-shadow: 0 0 3px 1px var(--bg-trama) !important;
+}
+
+.cont-input {
+    display: flex;
+    justify-content: center;
+}
+
+textarea.text-area {
+    min-height: 200px;
+    border-radius: 10px;
+}
+
+form span {
+    color: var(--naranja);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/*------------------ fin estilo de login ---------------------------*/
+
+/*------------------ ESTILO DE LISTAS DE RESTAURANTE ----------------------*/
+.tit-rest {
+    font-family: var(--font-tit);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.tit-acount{
+    font-family: var(--font-tit);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+h3.tit-rest {
+    font-family: var(--font-tit);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 1px 15px rgba(118, 118, 138, 0.3);
+    background-color: #fff;
+    margin-bottom: -40px;
+    border-radius: 50px;
+}
+
+.restaurantes, .menu-admin-main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cont-rest,
+.box-menu-admin {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.cont-rest {
+    flex-basis: 23%;
+    transition: all 0.2s linear;
+}
+
+.lista-product:hover,
+.cont-rest.cont-tit:hover {
+    box-shadow: 0 1px 5px var(--bg-trama);
+    transform: scale(1.04);
+    animation-timing-function: cubic-bezier(.075,.82,.165,1);
+    -moz-animation-timing-function: cubic-bezier(.075,.82,.165,1);
+    -webkit-animation-timing-function: cubic-bezier(.075,.82,.165,1);
+    transition: .3s;
+}
+/*-------------------- fin de estilos listas restaurante -----------------*/
+
+/*--------------------- ESTILOS DE LA PAGINA MENUS DE RESTAURANTE -----------------*/
+.content-menu-rest {
+    display: flex;
+}
+
+.menu-rest {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -120px;
+    padding-right: 50px;
+}
+
+.header-tit {
+    text-align: center;
+    padding: 15px;
+}
+
+
+.info-rest {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.info-rest a {
+    font-weight: 600;
+}
+
+.info-rest a:hover {
+    color:var(--naranja);
+}
+
+.cont-list-menu{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form-list-menu {
+    display: flex;
+}
+
+
+.aside-pedido form label,
+.form-list-menu label {
+    font-family: var(--font);
+    font-size: 1rem;
+}
+
+.aside-pedido form label {
+    margin-bottom: 0;
+    padding: 2px;
+}
+
+.img-prod-list,
+.name-prod-list,
+.precio-prod-list,
+.btn-prod-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.img-prod-list{
+    flex-basis: 20%;
+}
+
+.name-prod-list{
+    flex-basis: 60%;
+    padding: 2%;
+    line-height: 1.5rem;
+}
+
+.precio-prod-list{
+    flex-basis: 10%;
+}
+
+.btn-prod-list{
+    flex-basis: 10%;
+}
+
+
+/*--------------------fin estilos de menus restaurante --------------------------------*
+
+
+/*------------------ ESTILOS ASIDE DE CARRITO DE COMPRA ----------------------*/
+.aside-pedido{
+    flex: 30%;
+    margin-top: -120px;
+}
+
+.fixed-aside {
+    position: fixed;
+    width: 24%;
+    top: 170px;
+    transition: .8s ease-in;
+}
+
+.cont-tit,
+.tit-rest-admin,
+.menu-admin,
+.cont-new-user,
+.cont-new-prod,
+.cont-new-rest,
+.cont-list-prod,
+.cont-list-rest,
+.cont-list-user,
+.cont-pedido,
+.lista-product {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px var(--shadow);
+    padding: 20px 30px;
+}
+
+.cont-new-rest {
+    flex-basis: 45%;
+}
+
+.tit-pedido {
+    border-bottom: 1px solid var(--gris);
+    padding: 10px 0;
+    font-family: var(--font-tit);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.lista-product,
+.cont-list-carrito {
+    display: flex; 
+}
+
+.lista-product {
+    transition: all 0.2s linear;
+}
+
+.ped-cant,
+.ped-prod,
+.pre-prod,
+.pre-sub-total,
+.pre-envio,
+.pre-total-total,
+.borrar {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.ped-cant {
+    flex-basis: 8%;
+    text-align: center;
+    color: #125fca;
+    background-color: #e7f1fe;
+    justify-content: center;
+    font-weight: 500;
+
+}
+
+.ped-prod {
+    flex-basis: 67%;
+    text-align: left;
+    padding-left: 10px;
+    color: #125fca;
+    font-family: var(--font-tit);
+}
+
+.pre-prod,
+.pre-sub-total,
+.pre-envio,
+.pre-total-total {
+    flex-basis: 20%;
+    justify-content: flex-end;
+}
+
+.subtotal, 
+.gastos-envio, 
+.total-total {
+    flex-basis: 83%;
+    padding-left: 5px;
+    margin-bottom: 15px;
+    font-family: var(--font-tit);
+}
+
+.subtotal,
+.pre-sub-total {
+    border-top: 1px solid var(--gris);
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+.subtotal,
+.pre-sub-total,
+.total-total,
+.pre-total-total {
+    font-weight: 600;
+}
+
+button.borrar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    flex-basis: 5%;
+}
+
+button.borrar a i{
+    color: red;
+}
+
+.pagar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(231, 15, 15);
+    color: white;
+    cursor:pointer;
+}
+
+.carro {
+    display: flex;
+    flex-direction: row;
+}
+/*----------------------fin de estilos asidede carrito compra -------------------*/
+
+.cont-slider {
+    margin: 80px 0;
+}
+
+.cont-slider ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+a.li-slider{
+    text-align: center;
+    text-decoration: none;
+}   
+
+/*---------------------------       ESTILOS ADMIN   ----------------------*/
+.header-admin {
+    width: 100%;
+    height: 400px;
+    background-image: var(--gradient-moz), url(../img/fondos/admin.jpg);
+    background-image: var(--gradient-webkit), url(../img/fondos/admin.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cont-admin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.box-menu-admin {
+    flex-basis: 30%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+
+.box-menu-admin a {
+    font-family: var(--font-tit);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+ul div.box-menu-admin:hover {
+    transform: scale(1.04);
+}
+
+ul.menu-admin-main div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+ul.menu-admin-main div:nth-child(1){
+    background-image: url(../img/fondos/list-rest.jpg);
+}
+
+ul.menu-admin-main div:nth-child(2){
+    background-image: url(../img/fondos/new-rest.jpg);
+}
+
+ul.menu-admin-main div:nth-child(3){
+    background-image: url(../img/fondos/list-prod.jpg);
+}
+
+ul.menu-admin-main div:nth-child(4){
+    background-image: url(../img/fondos/new-prod.jpg);
+}
+
+ul.menu-admin-main div:nth-child(5){
+    background-image: url(../img/fondos/list-user.jpg);
+}
+
+ul.menu-admin-main div:nth-child(6){
+    background-image: url(../img/fondos/new-user.jpg);
+}
+
+.cont-tit-select {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.tit-nav-admin{
+    margin-top: -45px;
+    text-align: center;
+}
+
+/*.cont-tit, .tit-rest-admin, .menu-admin{
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 15px var(--shadow);
+    padding: 20px 30px;
+}*/
+
+.tit-rest-admin {
+    width: 50%;
+    text-align: center;
+}
+
+.select-option {
+    cursor: pointer;
+    appearance: none;
+    overflow: hidden;
+    border: none;
+    color: #818896;
+    font-size: .85rem;
+    width: 100%;
+    background-image: url(../img/select.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.form-select {
+    display: flex;
+    align-items: center;
+}
+
+.form-select div {
+    flex-basis: 65%;
+}
+
+.form-select div:nth-child(2) {/*posicion de elemento*/
+    flex-basis: 30%;
+    margin-left: 10px;
+}
+
+table {
+    margin-bottom: 2.5rem;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+td,
+th {
+    border-bottom: 0.1rem solid #e1e1e1;
+    padding: 1.2rem 0.7rem;
+    text-align: left;
+}
+
+td:first-child,
+th:first-child {
+    padding-left: 0;
+    text-align: left;
+}
+
+td:last-child,
+th:last-child {
+    padding-right: 0;
+}
+
+td.center-tit {
+    text-align: center;
+    color: var(--naranja);
+}
+
+.td-name,
+.td-dir,
+.td-descrip {
+    width: 20%;
+}
+
+.form-new-rest {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*---------------       ESTILO DE FOOTER        --------------------*/
+.tema-color {
+    background-color: #125fca;;
+}
+
+footer .footer-info{
+    padding: 2% 0;
+}
+
+footer .footer-info h5 {
+    color: var(--bg);
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+footer .font-footer{
+    font-family: var(--font);
+    color:var(--bg);
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0 25%;
+}
+
+footer .footer-info .footer-info-flex{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3%;
+
+}
+
+footer .footer-info .footer-info-flex .footer-info-box{
+    flex:1;
+    text-decoration: none;
+    text-align: center;
+    color: var(--bg);
+}
+
+footer .footer-info .footer-info-flex .footer-info-box .font-footer-info{
+    font-family: var(--font);
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0 8%;
+}
+
+.footer-info-box i{
+    font-size: 2.5rem;
+    margin: 0 2%;
+}
+
+.footer-mini {
+    background-color: #000;
+    color: var(--bg);
+    padding: 2% 0;
+}
+
+.footer-mini .contenedor .social-links a i {
+    font-size: 2rem;
+    margin-right: 2%;
+    color: var(--bg-trama);
+}
+
+.footer-mini .contenedor .social-links a i:hover{
+    transform: scale(1.2);
+    color: var(--bg)
+}
+
+
+footer .footer-mini .contenedor .social-links{
+    margin-bottom: 1.25rem;  /*------- 20px ---------*/
+}
+
+footer .footer-mini .contenedor .lista-links{
+    margin: 0 0 14px 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.lista-links li.footer-link {
+    list-style: none;
+    flex:1 1 25%;
+}
+
+.lista-links li.footer-link a,
+.small-footer{
+    font-size: 0.8125rem; /*---- 12px -----*/
+    color: var(--bg-trama);
+}
+
+.lista-links li.footer-link a:hover{
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+
+/*----------------  ESTILOS DE PAGINA PEDIDO    ------------------------*/
+.header-pedido {
+    width: 100%;
+    height: 150px;
+    background-image: var(--gradient-moz), url(../img/fondos/pedido.jpg);
+    background-image: var(--gradient-webkit), url(../img/fondos/pedido.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input[type=radio] {
+    color:blue;
+}
+
+.list-envio {
+    flex-direction: column;
+}
+
+.cont-envio {
+    flex: 1;
+}
+
+.circle1{
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: rgba(0, 153, 255, 0.151);
+    padding-top: 130px;
+    padding-left: 0;
+    margin: 50px 0 50px 50px;
+}
+
+.circle2{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: rgba(36, 142, 255, 0.09);
+    position: absolute;
+    top: 50px;
+    right: -220px;
+    z-index: -1;
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+.li-account a:hover {
+    text-decoration: underline;
+}
+
+.header-account {
+    width: 100%;
+    height: 150px;
+    background-image: var(--gradient-moz), url(../img/fondos/account.jpg);
+    background-image: var(--gradient-webkit), url(../img/fondos/account.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.box-pedido {
+    margin-bottom: 2rem;
+    flex-basis: 47%;
+}
+
+footer,
+.no-display-flex p,
+.info-user-pedido p,
+.box-pedido p {
+    line-height: 2rem;
+}
+
+.box-pedido p:nth-child(1){
+    font-weight: 700;
+    color: #125fca;
+}
+
+.tot-envio-pedido {
+    margin: 20px;
+    padding: 16px;
+    background-color: rgba(0, 153, 255, 0.151);
+    border-radius: 10px;
+}
+
+.no-display-flex {
+    display: block;
+}
+
+.margin-bottom {
+    margin-bottom: 3rem;
+}
+
+.img-enviado {
+    margin-top: 80px;
+    margin-bottom: -100px;
+}
+
+.mensaje-enviado {
+    margin: 80px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: animaWidth 2s ease alternate;
+}
+
+@keyframes animaWidth{
+    0% {
+        transform: scale(0.7);
+    }
+    
+    45% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animacion {
+    animation: animaWidth 2s ease alternate;
+}
+
+#img_product,
+#logo_rest{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.upload_image {
+    cursor: pointer;
+    align-items: center;
+}
+
+
+/*----------------------    slider  ---------*/
+
+.contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha {
+    border: none;
+    background-color: transparent;
+    font-size: 2.5rem;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: var(--color-font);
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-carrusel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth; /*hace que el scroll del carrusel sea con una transicion mediana.*/
+}
+
+.contenedor-carrusel .carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contenedor-carrusel .carrusel .li-slider {
+    min-width: 16.66%;
+    transition: .1s ease all; 
+}
+
+a.li-slider li {
+    margin: 10px;
+    background-color: var(--naranja);
+    padding: 23px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 2px 5px var(--shadow);
+    list-style: none;
+}
